@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeoSave</title>
+  <link rel="icon" href="Media/NeoSave.ico" type="image/x-icon" />
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    }
+
+    .background {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+    }
+
+    .img-wrapper {
+    position: absolute;
+    top: 0;
+    left: -350px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    }
+
+    .img-layer {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    }
+
+    .background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    background-color: #34495e;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%);
+    z-index: 2;
+    }
+
+    .welcome-box {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    padding: 40px 60px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    color: white;
+    font-family: Arial, sans-serif;
+    z-index: 10;
+    }
+
+    .welcome-box h1 {
+    margin: 0;
+    font-size: 4rem;
+    line-height: 1.2;
+    text-align: left;
+    }
+
+    .welcome-box .bold {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-weight: bold;
+    font-size: 4.5rem;
+    display: block;
+    }
+
+    .welcome-box .light {
+    font-weight: normal;
+    font-size: 4rem;
+    display: block;
+    opacity: 0.9;
+    }
+
+    .right-content {
+    position: absolute;
+    top: 48%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: 30%;
+    color: white;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    font-family: Arial, sans-serif;
+    }
+
+    .logo {
+    width: 180px;
+    margin-top: -30px;
+    }
+
+    .subtext {
+    font-size: 2rem;
+    opacity: 0.95;
+    margin-top: -30px;
+    margin-left: -10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    white-space: nowrap;
+    text-align: center;
+    }
+
+    .btn, .btn-outline {
+    padding: 12px 25px;
+    font-size: 1rem;
+    text-align: center;
+    width: 160px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: -18px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background 0.3s;
+    }
+
+    .btn {
+    background-color: white;
+    color: black;
+    }
+
+    .btn:hover {
+    background-color: #ddd;
+    }
+
+    .btn-outline {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    }
+
+    .btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+
+    <div class="img-wrapper">
+      <img src="Media/landing.png" alt="Gambar PNG" class="img-layer" />
+    </div>
+
+    <div class="welcome-box">
+      <h1><span class="bold"><u>SELAMAT</u></span> <span class="light">DATANG</span></h1>
+    </div>
+
+    <div class="right-content">
+      <img src="Media/Investor.png" alt="Logo" class="logo" />
+      <p class="subtext">Silahkan daftar untuk pengguna baru!</p>
+      <a href="login.php" class="btn">Login</a>
+      <a href="daftar.php" class="btn btn-outline">Daftar</a>
+    </div>
+
+  </div>
+</body>
+</html>
